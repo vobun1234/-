@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>শুভেচ্ছা বার্তা</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #d1c4e9, #b39ddb);
+      font-family: 'Siyam Rupali', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      color: #4a148c;
+    }
+
+    h1 {
+      font-size: 48px;
+      animation: colorChange 3s infinite;
+    }
+
+    p {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #311b92;
+    }
+
+    @keyframes colorChange {
+      0% { color: #4a148c; }
+      50% { color: #6a1b9a; }
+      100% { color: #4a148c; }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    button:hover {
+      background-color: #5e35b1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌸 এদের পক্ষ থেকে শুভেচ্ছা 🌸</h1>
+  <p id="wishText">একটি সুন্দর দিন কাটাও!</p>
+
+  <button onclick="changeMessage()">আরও শুভেচ্ছা</button>
+
+  <script>
+    const messages = [
+      "সবাই ভালো থাকো 🌟",
+      "তোমার দিনটা হোক আনন্দময় 😊",
+      "সফলতা ও সুখ সবার জন্য 💖",
+      "ভালোবাসা ও শুভেচ্ছা 💐",
+      "এদের পক্ষ থেকে অনেক দোয়া ও শুভকামনা 🙏"
+    ];
+
+    function changeMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("wishText").innerText = messages[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
